@@ -14,14 +14,17 @@ $motorway->addVehicle(new Car('white', 4, 'electricity'));
 $motorway->addVehicle(new Bicycle('grey', 1));
 var_dump($motorway);
 
-$pedestrianway = new Pedestrianway();
-$pedestrianway->setNbLane(1);
-$pedestrianway->setMaxSpeed(10);
-var_dump($pedestrianway);
-
 $residentialway = new Residentialway();
 $residentialway->setNbLane(2);
 $residentialway->setMaxSpeed(50);
 var_dump($residentialway);
 
+$pedestrianway = new Pedestrianway();
+$pedestrianway->setNbLane(1);
+$pedestrianway->setMaxSpeed(10);
+var_dump($pedestrianway);
 
+$tesla= new Car ('blue', 2, 'electricity');
+
+$youShallNotPassStreet = new PedestrianWay(1, 10);
+echo $youShallNotPassStreet->addVehicle($tesla);

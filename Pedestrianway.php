@@ -9,6 +9,8 @@ final class Pedestrianway extends Highway
         if ($vehicle instanceof Bicycle || $vehicle instanceof Skateboard) 
         {
             $this->currentVehicles[] = $vehicle;
+        } else {
+            return 'You can\'t drive here!! Go away!';
         }
     }
 }
